@@ -47,7 +47,7 @@ namespace PracticasCursoSelenium
             {
                 //Navegamos a ST1
                 vChrome.Navigate().GoToUrl(Url);
-
+                Console.WriteLine("Abro navegador");
                 //Login
                 vChrome.FindElement(By.Id("ctl00_RHSContentPlaceHolder_tbUsername")).Click();
                 vChrome.FindElement(By.Id("ctl00_RHSContentPlaceHolder_tbUsername")).Clear();
@@ -78,6 +78,7 @@ namespace PracticasCursoSelenium
         [TearDown]
         public void CloseBrowser()
         {
+            Console.WriteLine("Cierra navegador");
             vChrome.Quit();
         }
     }
